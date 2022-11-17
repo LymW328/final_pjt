@@ -1,0 +1,340 @@
+[
+  {
+    "pk": 505642,
+    "fields": {
+      "movie_id": 505642,
+      "title": "Black Panther: Wakanda Forever",
+      "released_date": "2022-11-09",
+      "popularity": 4392.866,
+      "vote_avg": 7.541,
+      "overview": "Queen Ramonda, Shuri, M’Baku, Okoye and the Dora Milaje fight to protect their nation from intervening world powers in the wake of King T’Challa’s death. As the Wakandans strive to embrace their next chapter, the heroes must band together with the help of War Dog Nakia and Everett Ross and forge a new path for the kingdom of Wakanda.",
+      "poster_path": "/sv1xJUazXeYqALzczSZ3O6nkH75.jpg",
+      "genres": [
+        28,
+        12,
+        878
+      ]
+    }
+  },
+  {
+    "pk": 829280,
+    "fields": {
+      "movie_id": 829280,
+      "title": "Enola Holmes 2",
+      "released_date": "2022-11-04",
+      "popularity": 2446.024,
+      "vote_avg": 7.752,
+      "overview": "Now a detective-for-hire like her infamous brother, Enola Holmes takes on her first official case to find a missing girl, as the sparks of a dangerous conspiracy ignite a mystery that requires the help of friends — and Sherlock himself — to unravel.",
+      "poster_path": "/tegBpjM5ODoYoM1NjaiHVLEA0QM.jpg",
+      "genres": [
+        9648,
+        12,
+        80
+      ]
+    }
+  },
+  {
+    "pk": 436270,
+    "fields": {
+      "movie_id": 436270,
+      "title": "Black Adam",
+      "released_date": "2022-10-19",
+      "popularity": 3164.736,
+      "vote_avg": 6.858,
+      "overview": "Nearly 5,000 years after he was bestowed with the almighty powers of the Egyptian gods—and imprisoned just as quickly—Black Adam is freed from his earthly tomb, ready to unleash his unique form of justice on the modern world.",
+      "poster_path": "/3zXceNTtyj5FLjwQXuPvLYK5YYL.jpg",
+      "genres": [
+        28,
+        14,
+        878
+      ]
+    }
+  },
+  {
+    "pk": 882598,
+    "fields": {
+      "movie_id": 882598,
+      "title": "Smile",
+      "released_date": "2022-09-23",
+      "popularity": 2442.625,
+      "vote_avg": 6.674,
+      "overview": "After witnessing a bizarre, traumatic incident involving a patient, Dr. Rose Cotter starts experiencing frightening occurrences that she can't explain. As an overwhelming terror begins taking over her life, Rose must confront her troubling past in order to survive and escape her horrifying new reality.",
+      "poster_path": "/aPqcQwu4VGEewPhagWNncDbJ9Xp.jpg",
+      "genres": [
+        27,
+        9648,
+        53
+      ]
+    }
+  },
+  {
+    "pk": 49046,
+    "fields": {
+      "movie_id": 49046,
+      "title": "All Quiet on the Western Front",
+      "released_date": "2022-10-07",
+      "popularity": 1760.871,
+      "vote_avg": 7.825,
+      "overview": "Paul Baumer and his friends Albert and Muller, egged on by romantic dreams of heroism, voluntarily enlist in the German army. Full of excitement and patriotic fervour, the boys enthusiastically march into a war they believe in. But once on the Western Front, they discover the soul-destroying horror of World War I.",
+      "poster_path": "/hYqOjJ7Gh1fbqXrxlIao1g8ZehF.jpg",
+      "genres": [
+        10752,
+        18,
+        28
+      ]
+    }
+  },
+  {
+    "pk": 664469,
+    "fields": {
+      "movie_id": 664469,
+      "title": "Amsterdam",
+      "released_date": "2022-09-27",
+      "popularity": 256.329,
+      "vote_avg": 6.1,
+      "overview": "In the 1930s, three friends—a doctor, a nurse, and an attorney—witness a murder, become suspects themselves and uncover one of the most outrageous plots in North American history.",
+      "poster_path": "/6sJcVzGCwrDCBMV0DU6eRzA2UxM.jpg",
+      "genres": [
+        80,
+        35,
+        36,
+        9648,
+        53
+      ]
+    }
+  },
+  {
+    "pk": 361743,
+    "fields": {
+      "movie_id": 361743,
+      "title": "Top Gun: Maverick",
+      "released_date": "2022-05-24",
+      "popularity": 903.97,
+      "vote_avg": 8.3,
+      "overview": "After more than thirty years of service as one of the Navy’s top aviators, and dodging the advancement in rank that would ground him, Pete “Maverick” Mitchell finds himself training a detachment of TOP GUN graduates for a specialized mission the likes of which no living pilot has ever seen.",
+      "poster_path": "/62HCnUTziyWcpDaBO2i1DX17ljH.jpg",
+      "genres": [
+        28,
+        18
+      ]
+    }
+  },
+  {
+    "pk": 948276,
+    "fields": {
+      "movie_id": 948276,
+      "title": "Lost Bullet 2",
+      "released_date": "2022-11-10",
+      "popularity": 704.481,
+      "vote_avg": 7.438,
+      "overview": "Having cleared his name, genius mechanic Lino has only one goal in mind: getting revenge on the corrupt cops who killed his brother and his mentor.",
+      "poster_path": "/uAeZI1JJbLPq7Bu5dziH7emHeu7.jpg",
+      "genres": [
+        28,
+        18,
+        53
+      ]
+    }
+  },
+  {
+    "pk": 766475,
+    "fields": {
+      "movie_id": 766475,
+      "title": "See How They Run",
+      "released_date": "2022-09-09",
+      "popularity": 161.322,
+      "vote_avg": 6.614,
+      "overview": "In the West End of 1950s London, plans for a movie version of a smash-hit play come to an abrupt halt after a pivotal member of the crew is murdered. When world-weary Inspector Stoppard and eager rookie Constable Stalker take on the case, the two find themselves thrown into a puzzling whodunit within the glamorously sordid theater underground, investigating the mysterious homicide at their own peril.",
+      "poster_path": "/r3rpSAi2yukZwr9H2km0WKGODWo.jpg",
+      "genres": [
+        9648,
+        53,
+        35
+      ]
+    }
+  },
+  {
+    "pk": 913290,
+    "fields": {
+      "movie_id": 913290,
+      "title": "Barbarian",
+      "released_date": "2022-09-08",
+      "popularity": 327.027,
+      "vote_avg": 6.974,
+      "overview": "In town for a job interview, a young woman arrives at her Airbnb late at night only to find that it has been mistakenly double-booked and a strange man is already staying there. Against her better judgement, she decides to stay the night anyway, but soon discovers that there is much more to be afraid of in the house than the other guest.",
+      "poster_path": "/idT5mnqPcJgSkvpDX7pJffBzdVH.jpg",
+      "genres": [
+        27,
+        53
+      ]
+    }
+  },
+  {
+    "pk": 718930,
+    "fields": {
+      "movie_id": 718930,
+      "title": "Bullet Train",
+      "released_date": "2022-07-03",
+      "popularity": 885.009,
+      "vote_avg": 7.514,
+      "overview": "Unlucky assassin Ladybug is determined to do his job peacefully after one too many gigs gone off the rails. Fate, however, may have other plans, as Ladybug's latest mission puts him on a collision course with lethal adversaries from around the globe—all with connected, yet conflicting, objectives—on the world's fastest train.",
+      "poster_path": "/tVxDe01Zy3kZqaZRNiXFGDICdZk.jpg",
+      "genres": [
+        28,
+        35,
+        53
+      ]
+    }
+  },
+  {
+    "pk": 1013860,
+    "fields": {
+      "movie_id": 1013860,
+      "title": "R.I.P.D. 2: Rise of the Damned",
+      "released_date": "2022-11-15",
+      "popularity": 315.242,
+      "vote_avg": 6.737,
+      "overview": "When Sheriff Roy Pulsipher finds himself in the afterlife, he joins a special police force and returns to Earth to save humanity from the undead.",
+      "poster_path": "/g4yJTzMtOBUTAR2Qnmj8TYIcFVq.jpg",
+      "genres": [
+        14,
+        28,
+        35,
+        80
+      ]
+    }
+  },
+  {
+    "pk": 595586,
+    "fields": {
+      "movie_id": 595586,
+      "title": "Causeway",
+      "released_date": "2022-10-28",
+      "popularity": 369.146,
+      "vote_avg": 6.869,
+      "overview": "A US soldier suffers a traumatic brain injury while fighting in Afghanistan and struggles to adjust to life back home in New Orleans. When she meets local mechanic James, the pair begin to forge an unexpected bond.",
+      "poster_path": "/bUzKIqFIS05Ss31zRTfZfHJIgDP.jpg",
+      "genres": [
+        18
+      ]
+    }
+  },
+  {
+    "pk": 619730,
+    "fields": {
+      "movie_id": 619730,
+      "title": "Don't Worry Darling",
+      "released_date": "2022-09-21",
+      "popularity": 507.533,
+      "vote_avg": 6.91,
+      "overview": "Alice and Jack are lucky to be living in the idealized community of Victory, the experimental company town housing the men who work for the top-secret Victory Project and their families. But when cracks in their idyllic life begin to appear, exposing flashes of something much more sinister lurking beneath the attractive façade, Alice can’t help questioning exactly what they’re doing in Victory, and why.",
+      "poster_path": "/60hrKYVq6Y1QRJeHNbYo3tHDcUd.jpg",
+      "genres": [
+        53,
+        9648,
+        878
+      ]
+    }
+  },
+  {
+    "pk": 833097,
+    "fields": {
+      "movie_id": 833097,
+      "title": "Falling for Christmas",
+      "released_date": "2022-11-10",
+      "popularity": 807.512,
+      "vote_avg": 6.944,
+      "overview": "A newly engaged and spoiled hotel heiress finds herself in the care of a handsome, blue-collar lodge owner and his precocious daughter after getting total amnesia in a skiing accident.",
+      "poster_path": "/6GkphwL9s6dZb3DoQS9OQ4LcPgY.jpg",
+      "genres": [
+        10749,
+        35
+      ]
+    }
+  },
+  {
+    "pk": 724495,
+    "fields": {
+      "movie_id": 724495,
+      "title": "The Woman King",
+      "released_date": "2022-09-15",
+      "popularity": 210.096,
+      "vote_avg": 7.379,
+      "overview": "The story of the Agojie, the all-female unit of warriors who protected the African Kingdom of Dahomey in the 1800s with skills and a fierceness unlike anything the world has ever seen, and General Nanisca as she trains the next generation of recruits and readies them for battle against an enemy determined to destroy their way of life.",
+      "poster_path": "/438QXt1E3WJWb3PqNniK0tAE5c1.jpg",
+      "genres": [
+        28,
+        18,
+        36
+      ]
+    }
+  },
+  {
+    "pk": 762504,
+    "fields": {
+      "movie_id": 762504,
+      "title": "Nope",
+      "released_date": "2022-07-20",
+      "popularity": 259.099,
+      "vote_avg": 6.959,
+      "overview": "Residents in a lonely gulch of inland California bear witness to an uncanny, chilling discovery.",
+      "poster_path": "/AcKVlWaNVVVFQwro3nLXqPljcYA.jpg",
+      "genres": [
+        27,
+        9648,
+        878,
+        53
+      ]
+    }
+  },
+  {
+    "pk": 616037,
+    "fields": {
+      "movie_id": 616037,
+      "title": "Thor: Love and Thunder",
+      "released_date": "2022-07-06",
+      "popularity": 980.966,
+      "vote_avg": 6.71,
+      "overview": "After his retirement is interrupted by Gorr the God Butcher, a galactic killer who seeks the extinction of the gods, Thor Odinson enlists the help of King Valkyrie, Korg, and ex-girlfriend Jane Foster, who now wields Mjolnir as the Mighty Thor. Together they embark upon a harrowing cosmic adventure to uncover the mystery of the God Butcher’s vengeance and stop him before it’s too late.",
+      "poster_path": "/pIkRyD18kl4FhoCNQuWxWu5cBLM.jpg",
+      "genres": [
+        14,
+        28,
+        35
+      ]
+    }
+  },
+  {
+    "pk": 928344,
+    "fields": {
+      "movie_id": 928344,
+      "title": "Weird: The Al Yankovic Story",
+      "released_date": "2022-09-08",
+      "popularity": 155.015,
+      "vote_avg": 6.667,
+      "overview": "Exploring every facet of ‘Weird Al’ Yankovic’s life, from his meteoric rise to fame with early hits like ‘Eat It’ and ‘Like a Surgeon’ to his torrid celebrity love affairs and famously depraved lifestyle, this biopic takes audiences on a truly unbelievable journey through Yankovic’s life and career, from gifted child prodigy to the greatest musical legend of all time.",
+      "poster_path": "/qcj2z13G0KjaIgc01ifiUKu7W07.jpg",
+      "genres": [
+        35,
+        10402,
+        18
+      ]
+    }
+  },
+  {
+    "pk": 800939,
+    "fields": {
+      "movie_id": 800939,
+      "title": "Ticket to Paradise",
+      "released_date": "2022-09-08",
+      "popularity": 257.898,
+      "vote_avg": 7.015,
+      "overview": "A divorced couple teams up and travels to Bali to stop their daughter from making the same mistake they think they made 25 years ago.",
+      "poster_path": "/1tzERH50P5c2mFWtLbgixzLZS1L.jpg",
+      "genres": [
+        10749,
+        35
+      ]
+    }
+  }
+]
