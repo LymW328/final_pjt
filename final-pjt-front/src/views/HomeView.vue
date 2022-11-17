@@ -16,5 +16,13 @@ export default {
     // HelloWorld,
     SignLogin,
   },
+  created() {
+    this.getMovies()
+  },
+  methods: {
+    getMovies() {
+      this.$store.dispatch('getMovies')
+    },
+  },
 }
 </script>

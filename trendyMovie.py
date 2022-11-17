@@ -9,9 +9,9 @@ TMDB_API_KEY = 'a6cf97bd4b454c941b8d86091ec398b5'
 def get_movie_datas():
     total_data = []
 
-    # 1페이지부터 500페이지까지 (페이지당 20개, 총 10,000개)
+ 
 
-    request_url = f"https://api.themoviedb.org/3/trending/movie/week?api_key={TMDB_API_KEY}"
+    request_url = f"https://api.themoviedb.org/3/trending/movie/week?api_key={TMDB_API_KEY}&language=ko-KR"
     movies = requests.get(request_url).json()
 
     for movie in movies['results']:
@@ -29,12 +29,13 @@ def get_movie_datas():
 
             data = {
                 "pk": movie['id'],
-                # "model": "movies.movie",
+                "model": "movies.trend",
                 "fields": fields
             }
 
             total_data.append(data)
-
+    print(total_data)
+            
     with open("trend_data.json", "w", encoding="utf-8") as w:
         json.dump(total_data, w, indent="  ", ensure_ascii=False)
 
