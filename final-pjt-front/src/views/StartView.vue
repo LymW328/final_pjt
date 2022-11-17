@@ -7,7 +7,7 @@
       </button>
       <div>
         <button @click="sign">
-          Signin
+          Signup
         </button>
       </div>
     </div>
@@ -19,7 +19,10 @@ export default {
   name: 'StartView',
   methods: {
     login() {
-      this.$router.push('SignInView')
+      this.$router.push('/login')
+    },
+    sign() {
+      this.$router.push('/signup')
     },
   },
 }

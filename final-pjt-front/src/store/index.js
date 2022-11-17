@@ -23,6 +23,7 @@ export default new Vuex.Store({
   mutations: {
     GET_MOVIES(state, movies) {
       state.movies = movies
+      // console.log(state.movies)
     },
     SAVE_TOKEN(state, token) {
       state.token = token
@@ -33,12 +34,15 @@ export default new Vuex.Store({
     getMovies(context) {
       axios({
         method: 'get',
-        url: `${API_URL}/movies`,
-        headers: {
-          Authorization: `Token ${context.state.token}`,
-        },
+        url: `${API_URL}/movies/`,
+        // headers: {
+        //   Authorization: `Token ${context.state.token}`,
+        // },
       })
-        .then((res) => context.commit('GET_MOVIES', res.data))
+        .then(
+          (res) => context.commit('GET_MOVIES', res.data),
+          // console.log('성공', context, res),
+        )
         .catch((err) => console.log(err))
     },
     signUp(context, payload) {

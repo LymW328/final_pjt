@@ -1,12 +1,12 @@
 <template>
   <div>
-    sign in
+    sign up view
   </div>
 </template>
 
 <script>
 export default {
-  name: 'SignInView',
+  name: 'SignupView',
 }
 </script>
 
