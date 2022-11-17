@@ -3,12 +3,12 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from rest_framework.decorators import permission_classes
 from rest_framework.permissions import IsAuthenticated
-from movies.serializers import MovieListSerializer , MovieDetailSerializer, CommentSerializer
+from movies.serializers import MovieListSerializer , MovieDetailSerializer, CommentSerializer, TrendListSerializer
 
 from rest_framework import status
 from django.shortcuts import get_object_or_404, get_list_or_404
 
-from .models import Movie, Comment
+from .models import Movie, Comment, Trend
  
 
 # 영화 리스트
@@ -20,8 +20,14 @@ def movie_list(request):
     return Response(serializer.data)
     
 @api_view(['GET'])
-def movie_detail(request, movie_pk):
-    movie = Movie.objects.get(pk=movie_pk)
+def trend_list(request):
+    movies = Trend.objects.all()
+    serializer = TrendListSerializer(movies, many=True)   
+    return Response(serializer.data)
+
+@api_view(['GET'])
+def movie_detail(request, movie_id):
+    movie = Movie.objects.get(pk=movie_id)
     # comments = movie.comment_set.all()
     # 역참조한 comments정보를 어떻게 serializer로 같이 보내줄까?
     serializer = MovieDetailSerializer(movie)
