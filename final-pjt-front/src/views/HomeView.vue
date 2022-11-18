@@ -4,7 +4,11 @@
     <NavBar />
     <div>homeview입니다.</div>
     <div>
-      {{ movies }}
+      무비올 시작
+    <MovieAll/>
+    여기까지 무비올
+    <TrendMovie/>
+
     </div>
 
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
@@ -18,27 +22,30 @@
 // import SignLogin from '../components/SignLogin.vue'
 
 import NavBar from '@/components/NavBar.vue'
+import MovieAll from '@/components/MovieAll.vue'
+import TrendMovie from '@/components/TrendMovie.vue'
 
 export default {
   name: 'HomeView',
   components: {
-    NavBar,
+    NavBar, MovieAll, TrendMovie
 
     // HelloWorld,
   },
-  computed: {
-    movies() {
-      // console.log(this.$store.state.movies)
-      return this.$store.state.movies
-    },
-  },
+
   created() {
     this.getMovies()
+    this.getTrendMovies()
+    
   },
   methods: {
     getMovies() {
       this.$store.dispatch('getMovies')
+      
     },
+    getTrendMovies() {
+      this.$store.dispatch('getTrendMovies')
+    }
   },
 }
 </script>

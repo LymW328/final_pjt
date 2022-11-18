@@ -10,6 +10,6 @@ urlpatterns = [
     # path('<int:movie_pk>/', views.detail),
     path('trend/', views.trend_list),
     
-    path('movives/<int:movie_pk>/', views.movie_detail),
+    path('movies/<int:movie_pk>/', views.movie_detail),
     path('comments/', views.comment_list),
 ]

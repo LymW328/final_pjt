@@ -13,7 +13,7 @@ export default new Vuex.Store({
   state: {
     token: [],
     movies: [],
-    treds: [],
+    trends: [],
   },
   getters: {
     isLogin(state) {
@@ -23,6 +23,10 @@ export default new Vuex.Store({
   mutations: {
     GET_MOVIES(state, movies) {
       state.movies = movies
+      // console.log(state.movies)
+    },
+    GET_TRENDMOVIES(state, trends) {
+      state.trends = trends
       // console.log(state.movies)
     },
     SAVE_TOKEN(state, token) {
@@ -41,6 +45,20 @@ export default new Vuex.Store({
       })
         .then(
           (res) => context.commit('GET_MOVIES', res.data),
+          // console.log('성공', context, res),
+        )
+        .catch((err) => console.log(err))
+    },
+    getTrendMovies(context) {
+      axios({
+        method: 'get',
+        url: `${API_URL}/movies/trend`,
+        // headers: {
+        //   Authorization: `Token ${context.state.token}`,
+        // },
+      })
+        .then(
+          (res) => context.commit('GET_TRENDMOVIES', res.data),
           // console.log('성공', context, res),
         )
         .catch((err) => console.log(err))
