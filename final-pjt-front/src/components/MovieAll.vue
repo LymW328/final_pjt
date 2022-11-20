@@ -1,11 +1,14 @@
 <template>
   <div>
+    
     <!-- movie detail -->
     <!-- {{ movies }} -->
     <MovieAllItem
-    v-for="(movie, movie_id) in movies"
-    :key="movie_id"
+    v-for="(movie, index, movie_id) in movies"
+    :key="index"
     :movie="movie"
+    :movie_id="movie_id"
+    
     />
   </div>
 </template>
@@ -14,11 +17,17 @@
 import MovieAllItem from './MovieAllItem.vue';
 export default {
   name: 'MovieAll',
+  
   computed: {
     movies() {
       // console.log(this.$store.state.movies)
       return this.$store.state.movies
     },
+
+
+    // onmovie() {
+    //   return this.$store.state.movie
+    // }
   },
   components: {
     MovieAllItem,

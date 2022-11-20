@@ -5,7 +5,7 @@ import axios from 'axios'
 import router from '@/router'
 
 const API_URL = 'http://127.0.0.1:8000'
-
+// let detail_url = 'http://127.0.0.1:8000/movies/:modvie_id/'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
@@ -14,6 +14,7 @@ export default new Vuex.Store({
     token: [],
     movies: [],
     trends: [],
+    movie: []
   },
   getters: {
     isLogin(state) {
@@ -21,6 +22,9 @@ export default new Vuex.Store({
     },
   },
   mutations: {
+    // GET_MOVIEDETAIL(state, movie) {
+    //   state.movie = movie
+    // },
     GET_MOVIES(state, movies) {
       state.movies = movies
       // console.log(state.movies)
@@ -49,6 +53,21 @@ export default new Vuex.Store({
         )
         .catch((err) => console.log(err))
     },
+    // 이걸 무비 디테일에 넣어보자..
+      // getMoviedetail(context) {
+      //   axios({
+      //     method: 'get',
+      //     url: detail_url
+          
+  
+      //   })
+      //     .then(
+      //       (res) => context.commit('GET_MOVIEDETAIL', res.data),
+      //       console.log('성공', context),
+      //     )
+      //     .catch((err) => console.log(err))
+
+    
     getTrendMovies(context) {
       axios({
         method: 'get',
@@ -103,6 +122,7 @@ export default new Vuex.Store({
           console.log(err)
         })
     },
+
   },
   modules: {},
 })

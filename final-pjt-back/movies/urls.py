@@ -10,6 +10,8 @@ urlpatterns = [
     # path('<int:movie_pk>/', views.detail),
     path('trend/', views.trend_list),
     
-    path('movies/<int:movie_pk>/', views.movie_detail),
-    path('comments/', views.comment_list),
+    path('<int:movie_id>/', views.movie_detail),
+    path('comments/', views.movie_comment_list),
+    # path('movies/comments/', views.movie_comment_list),
+    path('comments/<int:comment_pk>/', views.movie_comment_detail),
 ]
