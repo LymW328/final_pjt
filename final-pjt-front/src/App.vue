@@ -1,18 +1,18 @@
 <template>
   <div id="app">
-    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
       <div class="container-fluid">
         <router-link to="/" class="navbar-brand">
           <img alt="Vue logo" src="./assets/logo.png" style="height: 50px;" />
         </router-link>
         <ul class="navbar-nav">
           <li class="nav-item">
-            <router-link :to="{ name: 'login' }" class="nav-link">
+            <router-link :to="{ name: 'LoginView' }" class="nav-link">
               Login
             </router-link>
           </li>
           <li class="nav-item">
-            <router-link :to="{ name: 'signup' }" class="nav-link">
+            <router-link :to="{ name: 'SignupView' }" class="nav-link">
               Signup
             </router-link>
           </li>

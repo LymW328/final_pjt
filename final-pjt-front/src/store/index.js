@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import axios from 'axios'
-// import createPersistedState from 'vuex-persistedstate'
+import createPersistedState from 'vuex-persistedstate'
 import router from '@/router'
 
 const API_URL = 'http://127.0.0.1:8000'
@@ -9,12 +9,12 @@ const API_URL = 'http://127.0.0.1:8000'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  // plugins: [createPersistedState()],
+  plugins: [createPersistedState()],
   state: {
     token: [],
     movies: [],
     trends: [],
-    movie: []
+    movie: [],
   },
   getters: {
     isLogin(state) {
@@ -35,7 +35,7 @@ export default new Vuex.Store({
     },
     SAVE_TOKEN(state, token) {
       state.token = token
-      router.push({ name: 'HomeView' })
+      router.push({ name: 'home' })
     },
   },
   actions: {
@@ -43,9 +43,9 @@ export default new Vuex.Store({
       axios({
         method: 'get',
         url: `${API_URL}/movies/`,
-        // headers: {
-        //   Authorization: `Token ${context.state.token}`,
-        // },
+        headers: {
+          Authorization: `Token ${context.state.token}`,
+        },
       })
         .then(
           (res) => context.commit('GET_MOVIES', res.data),
@@ -54,27 +54,25 @@ export default new Vuex.Store({
         .catch((err) => console.log(err))
     },
     // 이걸 무비 디테일에 넣어보자..
-      // getMoviedetail(context) {
-      //   axios({
-      //     method: 'get',
-      //     url: detail_url
-          
-  
-      //   })
-      //     .then(
-      //       (res) => context.commit('GET_MOVIEDETAIL', res.data),
-      //       console.log('성공', context),
-      //     )
-      //     .catch((err) => console.log(err))
+    // getMoviedetail(context) {
+    //   axios({
+    //     method: 'get',
+    //     url: detail_url
 
-    
+    //   })
+    //     .then(
+    //       (res) => context.commit('GET_MOVIEDETAIL', res.data),
+    //       console.log('성공', context),
+    //     )
+    //     .catch((err) => console.log(err))
+
     getTrendMovies(context) {
       axios({
         method: 'get',
-        url: `${API_URL}/movies/trend`,
-        // headers: {
-        //   Authorization: `Token ${context.state.token}`,
-        // },
+        url: `${API_URL}/movies/trend/`,
+        headers: {
+          Authorization: `Token ${context.state.token}`,
+        },
       })
         .then(
           (res) => context.commit('GET_TRENDMOVIES', res.data),
@@ -122,7 +120,6 @@ export default new Vuex.Store({
           console.log(err)
         })
     },
-
   },
   modules: {},
 })

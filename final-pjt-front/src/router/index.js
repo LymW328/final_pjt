@@ -23,7 +23,7 @@ const routes = [
   },
   {
     path: '/login',
-    name: 'login',
+    name: 'LoginView',
     component: LoginView,
   },
   {
@@ -33,12 +33,12 @@ const routes = [
   },
   {
     path: '/signup',
-    name: 'signup',
+    name: 'SignupView',
     component: SignupView,
   },
   {
     // path: 'movies/detail',
-    path: 'movies/:movie_id',
+    path: '/movies/:movie_id',
     name: 'MovieDetail',
     component: MoviedetailView,
   },
