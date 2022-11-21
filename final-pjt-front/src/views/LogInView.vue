@@ -17,7 +17,7 @@
 
 <script>
 export default {
-  name: 'LoginView',
+  name: 'LogInView',
   data() {
     return {
       username: null,
@@ -28,7 +28,6 @@ export default {
     logIn() {
       const username = this.username
       const password = this.password
-
       const payload = {
         username: username,
         password: password,

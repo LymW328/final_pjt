@@ -20,7 +20,7 @@
             </router-link>
           </li>
           <li v-if="isLogin === null" class="nav-item">
-            <router-link :to="{ name: 'LoginView' }" class="nav-link">
+            <router-link :to="{ name: 'LogInView' }" class="nav-link">
               Login
             </router-link>
           </li>

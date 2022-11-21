@@ -2,12 +2,13 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 
-import LoginView from '../views/LoginView.vue'
+import LogInView from '../views/LogInView.vue'
 import SignupView from '../views/SignupView.vue'
 import MoviedetailView from '../views/MoviedetailView.vue'
 import ArticleView from '@/views/ArticleView'
 import CreateView from '@/views/CreateView'
 import DetailView from '@/views/DetailView'
+import TryCsssview from '@/views/TryCsssview'
 
 Vue.use(VueRouter)
 
@@ -23,8 +24,8 @@ const routes = [
   },
   {
     path: '/login',
-    name: 'LoginView',
-    component: LoginView,
+    name: 'LogInView',
+    component: LogInView,
   },
   {
     path: '/',
@@ -52,6 +53,11 @@ const routes = [
     path: '/create',
     name: 'CreateView',
     component: CreateView,
+  },
+  {
+    path: '/tss',
+    name: 'TryCsssview',
+    component: TryCsssview,
   },
 
   {
