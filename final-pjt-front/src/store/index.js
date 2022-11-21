@@ -37,6 +37,10 @@ export default new Vuex.Store({
       state.token = token
       router.push({ name: 'home' })
     },
+    DELETE_TOKEN(state) {
+      state.token = []
+      router.push({ name: 'home' })
+    },
   },
   actions: {
     getMovies(context) {
@@ -120,6 +124,19 @@ export default new Vuex.Store({
           console.log(err)
         })
     },
+    logOut(context) {
+      console.log('ok"')
+      axios({
+        method: 'post',
+        url: `${API_URL}/accounts/logout/`,
+      })
+        .then((res) => {
+          console.log(res)
+          context.commit('DELETE_TOKEN', res.data.key)
+        })
+        .catch((err) => {
+          console.log(err)
+        })
+    },
   },
-  modules: {},
 })

@@ -2,6 +2,11 @@
   <div id="app">
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
       <div class="container-fluid">
+        <button @click="Logout" v-if="isLogin === true">
+          Logout
+        </button>
+      </div>
+      <div class="container-fluid">
         <router-link to="/" class="navbar-brand">
           <img alt="Vue logo" src="./assets/logo.png" style="height: 50px;" />
         </router-link>
@@ -27,6 +32,24 @@
     <router-view />
   </div>
 </template>
+
+<script>
+export default {
+  name: 'App',
+
+  computed: {
+    isLogin() {
+      return this.$store.getters.isLogin
+    },
+  },
+  methods: {
+    Logout() {
+      console.log('ook')
+      this.$store.dispatch('logOut')
+    },
+  },
+}
+</script>
 
 <style>
 #app {

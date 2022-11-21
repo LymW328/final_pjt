@@ -43,7 +43,7 @@ const routes = [
     component: MoviedetailView,
   },
   {
-    path: 'articles/',
+    path: '/articles',
     name: 'articles',
     component: ArticleView,
   },
@@ -55,7 +55,7 @@ const routes = [
   },
 
   {
-    path: 'articles/:article_id',
+    path: '/articles/:article_id',
     name: 'DetailView',
     component: DetailView,
   },
