@@ -2,21 +2,29 @@
   <div id="app">
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
       <div class="container-fluid">
-        <button @click="Logout" v-if="isLogin === true">
+        <!-- <button @click="Logout" v-if="this.$store.token === ![]">
           Logout
-        </button>
+        </button> -->
+        <!-- <button @click="Logout" v-if="isLogin !== null">
+          Logout
+        </button> -->
       </div>
       <div class="container-fluid">
         <router-link to="/" class="navbar-brand">
           <img alt="Vue logo" src="./assets/logo.png" style="height: 50px;" />
         </router-link>
         <ul class="navbar-nav">
-          <li class="nav-item">
+          <li v-if="isLogin !== null" class="nav-item" @click="Logout">
+            <router-link :to="{ name: 'home' }" class="nav-link">
+              Logout
+            </router-link>
+          </li>
+          <li v-if="isLogin === null" class="nav-item">
             <router-link :to="{ name: 'LoginView' }" class="nav-link">
               Login
             </router-link>
           </li>
-          <li class="nav-item">
+          <li v-if="isLogin === null" class="nav-item">
             <router-link :to="{ name: 'SignupView' }" class="nav-link">
               Signup
             </router-link>
@@ -39,13 +47,15 @@ export default {
 
   computed: {
     isLogin() {
-      return this.$store.getters.isLogin
+      console.log(this.$store.state.token)
+      return this.$store.state.token
     },
   },
   methods: {
     Logout() {
       console.log('ook')
       this.$store.dispatch('logOut')
+      console.log(this.isLogin)
     },
   },
 }

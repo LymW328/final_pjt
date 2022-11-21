@@ -11,7 +11,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   plugins: [createPersistedState()],
   state: {
-    token: [],
+    token: null,
     movies: [],
     trends: [],
     movie: [],
@@ -38,7 +38,8 @@ export default new Vuex.Store({
       router.push({ name: 'home' })
     },
     DELETE_TOKEN(state) {
-      state.token = []
+      console.log(state.token)
+      state.token = null
       router.push({ name: 'home' })
     },
   },

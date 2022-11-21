@@ -28,7 +28,7 @@ export default {
     getArticleDetail() {
       axios({
         method: 'get',
-        url: `${API_URL}/api/v1/articles/${this.$route.params.id}`
+        url: `${API_URL}/articles/${this.$route.params.id}`,
       })
         .then((res) => {
           console.log(res)
@@ -37,7 +37,7 @@ export default {
         .catch((err) => {
           console.log(err)
         })
-    }
-  }
+    },
+  },
 }
 </script>

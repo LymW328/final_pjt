@@ -4,11 +4,13 @@
   <div>
     <h1>게시글 작성</h1>
     <form @submit.prevent="createArticle">
-      <label for="title">제목 : </label>
-      <input type="text" id="title" v-model.trim="title"><br>
-      <label for="content">내용 : </label>
-      <textarea id="content" cols="30" rows="10" v-model="content"></textarea><br>
-      <input type="submit" id="submit">
+      <label for="title">제목 :</label>
+      <input type="text" id="title" v-model.trim="title" />
+      <br />
+      <label for="content">내용 :</label>
+      <textarea id="content" cols="30" rows="10" v-model="content"></textarea>
+      <br />
+      <input type="submit" id="submit" />
     </form>
   </div>
 </template>
@@ -17,7 +19,6 @@
 import axios from 'axios'
 
 const API_URL = 'http://127.0.0.1:8000'
-
 
 export default {
   name: 'CreateView',
@@ -40,14 +41,14 @@ export default {
       }
       axios({
         method: 'post',
-        url: `${API_URL}/api/v1/articles/`,
+        url: `${API_URL}/articles/`,
         data: {
           title: title,
           content: content,
         },
         headers: {
-          Authorization: `Token ${this.$store.state.token}`
-        }
+          Authorization: `Token ${this.$store.state.token}`,
+        },
       })
         .then((res) => {
           console.log(res)
@@ -56,11 +57,9 @@ export default {
         .catch((err) => {
           console.log(err)
         })
-    }
-  }
+    },
+  },
 }
 </script>
 
-<style>
-
-</style>
+<style></style>
