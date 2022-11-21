@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import StartView from '../views/StartView.vue'
+
 import LoginView from '../views/LoginView.vue'
 import SignupView from '../views/SignupView.vue'
 import MoviedetailView from '../views/MoviedetailView.vue'
@@ -9,15 +9,9 @@ import ArticleView from '@/views/ArticleView'
 import CreateView from '@/views/CreateView'
 import DetailView from '@/views/DetailView'
 
-
 Vue.use(VueRouter)
 
 const routes = [
-  {
-    path: 'start/',
-    name: 'start',
-    component: StartView,
-  },
   {
     path: '/about',
     name: 'about',
@@ -50,19 +44,15 @@ const routes = [
   },
   {
     path: 'articles/',
-    name: 'ArticleView',
-    component: ArticleView
+    name: 'articles',
+    component: ArticleView,
   },
- 
+
   {
     path: '/create',
     name: 'CreateView',
-    component: CreateView
+    component: CreateView,
   },
-
-
-
-
 
   {
     path: 'articles/:article_id',
