@@ -28,7 +28,8 @@ export default {
     getArticleDetail() {
       axios({
         method: 'get',
-        url: `${API_URL}/articles/${this.$route.params.id}`,
+        url: `${API_URL}/avi/v1/articles/${this.$route.params.id}/`,
+        //위에서 에러가 났으니 article_id등으로 시험
       })
         .then((res) => {
           console.log(res)

@@ -11,6 +11,13 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   plugins: [createPersistedState()],
   state: {
+    articles: [
+      {
+        id:1,
+        title: 'title',
+        content: 'content'
+      }
+    ],
     token: null,
     movies: [],
     trends: [],
@@ -42,15 +49,18 @@ export default new Vuex.Store({
       state.token = null
       router.push({ name: 'home' })
     },
+    GET_ARTICLES(state, articles) {
+      state.articles = articles
+    },
   },
   actions: {
     getMovies(context) {
       axios({
         method: 'get',
         url: `${API_URL}/movies/`,
-        headers: {
-          Authorization: `Token ${context.state.token}`,
-        },
+        // headers: {
+        //   Authorization: `Token ${context.state.token}`,
+        // },
       })
         .then(
           (res) => context.commit('GET_MOVIES', res.data),
@@ -75,9 +85,9 @@ export default new Vuex.Store({
       axios({
         method: 'get',
         url: `${API_URL}/movies/trend/`,
-        headers: {
-          Authorization: `Token ${context.state.token}`,
-        },
+        // headers: {
+        //   Authorization: `Token ${context.state.token}`,
+        // },
       })
         .then(
           (res) => context.commit('GET_TRENDMOVIES', res.data),
@@ -134,6 +144,22 @@ export default new Vuex.Store({
         .then((res) => {
           console.log(res)
           context.commit('DELETE_TOKEN', res.data.key)
+        })
+        .catch((err) => {
+          console.log(err)
+        })
+    },
+    getArticles(context) {
+      axios({
+        method: 'get',
+        url: `${API_URL}/avi/v1/articles/`,
+        headers: {
+          Authorization: `Token ${context.state.token}`
+        }
+      })
+        .then((res) => {
+        
+          context.commit('GET_ARTICLES', res.data)
         })
         .catch((err) => {
           console.log(err)

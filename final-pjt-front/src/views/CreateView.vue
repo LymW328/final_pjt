@@ -38,10 +38,12 @@ export default {
       } else if (!content) {
         alert('내용을 입력해주세요')
         return
+        //AJAX요청을 보내지 않도록 return 시켜 함수 종료
       }
       axios({
         method: 'post',
         url: `${API_URL}/articles/`,
+        //위의 코드는 장고의 url문법을 따라야 하기에 마지막에 '/'를 붙인다.
         data: {
           title: title,
           content: content,
@@ -52,7 +54,7 @@ export default {
       })
         .then((res) => {
           console.log(res)
-          this.$router.push({ name: 'ArticleView' })
+          // this.$router.push({ name: 'ArticleView' }) 
         })
         .catch((err) => {
           console.log(err)
