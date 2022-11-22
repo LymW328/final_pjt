@@ -7,6 +7,11 @@
       <label for="content">내용 :</label>
       <textarea id="content" cols="30" rows="10" v-model="content"></textarea>
       <br />
+
+
+      
+
+
       <input type="submit" id="submit" />
     </form>
   </div>
@@ -21,10 +26,11 @@ export default {
   name: 'CommentCreateView',
   data() {
     return {
+      
       article_id: this.$route.params.article_id,
-
-      // thismovie : null    ### null 로 기본 설정하면 오류가 나더라... 아고 너무 힘들다...ㅠㅠ
-      thismovie: 0,
+      content: null,
+      // thismovie : null    ### null 로 기본 설정하면 오류
+      // thismovie: 0,
     }
   },
   methods: {
@@ -38,8 +44,10 @@ export default {
       }
       axios({
         method: 'post',
-        url: `${API_URL}/:id/comments/`,
+        url: `${API_URL}/${this.article_id}/comments/`,
         //위의 코드는 장고의 url문법을 따라야 하기에 마지막에 '/'를 붙인다.
+        // :id가 맞는가?
+        // article_id로 variable routing
         data: {
           content: content,
         },

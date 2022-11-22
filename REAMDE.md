@@ -15,3 +15,48 @@
         article.user = request.user
     ??? serializer.is_valisd(raiser_exception=True) 와 같을까?
 
+7. articlecreate와 commentcreate의 차이는 바로 commentcreate에는 user_id외에도 
+    article_id의 값이 외래값으로 참조된다. 이를 저장해야한다.--어떻게?
+      serializer.save(article=article) - 이 코드가 바로 그것인가?
+
+
+8. v-for는 이렇게도 쓸 수 있다.
+
+          <ul>
+        <li
+          v-for="todo in todos"
+          :key="todo.id"
+          >
+          {{ todo.text}}
+
+        </li>
+      </ul>
+      <!-- scypt -->
+      export default {
+        data: {
+          return todos: [
+          { id: 1, text: 'Learn to use'},
+          { id: 2, text: 'Learn to kill'}
+        ]
+          }
+        }
+
+9.  v-if를 사용해 덧글 입력창 설정하기
+      <p v-if="isCommnendzero">
+        덧글을 입력해 주세요
+      </p>
+
+      <p v-else>
+        덧글 목록
+        <!-- <ul>
+          <li
+            v-for="(comment, idx) in comments"
+            :key ="idx"
+            :comment="comment">
+            {{ comment }}
+
+          </li>
+        </ul> -->
+
+       
+      </p>

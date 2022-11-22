@@ -12,7 +12,10 @@
 
 <script>
 export default {
-    name: 'CommentList'
+    name: 'CommentList',
+    computed: {
+      
+    }
 }
 </script>
 

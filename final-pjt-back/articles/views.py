@@ -55,17 +55,17 @@ def article_detail(request, article_pk):
 
 @api_view(['GET'])
 def comment_list(request):
-    if request.method == 'GET':
-        # comments = Comment.objects.all()
-        comments = get_list_or_404(Comment)
-        serializer = CommentSerializer(comments, many=True)
-        return Response(serializer.data)
+
+    comments = Comment.objects.all()
+    # comments = get_list_or_404(Comment)
+    serializer = CommentSerializer(comments, many=True)
+    return Response(serializer.data)
 
 
 @api_view(['GET', 'DELETE', 'PUT'])
 def comment_detail(request, comment_pk):
-    # comment = Comment.objects.get(pk=comment_pk)
-    comment = get_object_or_404(Comment, pk=comment_pk)
+    comment = Comment.objects.get(pk=comment_pk)
+    # comment = get_object_or_404(Comment, pk=comment_pk)
 
     if request.method == 'GET':
         serializer = CommentSerializer(comment)
@@ -91,5 +91,7 @@ def comment_create(request, article_pk):
     serializer = CommentSerializer(data=request.data)
     if serializer.is_valid(raise_exception=True):
         serializer.save(article=article)
-        # article=article??
+        # comment.user = request.user
+        # article=article
+        # ??
         return Response(serializer.data, status=status.HTTP_201_CREATED)

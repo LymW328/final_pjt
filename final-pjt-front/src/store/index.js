@@ -16,6 +16,7 @@ export default new Vuex.Store({
     movies: [],
     trends: [],
     movie: [],
+    comments: []
   },
   getters: {
     isLogin(state) {

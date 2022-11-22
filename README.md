@@ -74,4 +74,5 @@ python manage.py loaddata xxx.json
 의문점
 1. 역참조한 comments정보를 어떻게 serializer로 같이 보내줄까? - 221005(수)_코딩 Live 강의 Python 트랙_오후_1_Comment 구현 2 
 
-2. makemigration과 migrate를 하는데 설계도는 정상적으로 불러오지만 db반영이 되지 않음!
+2. makemigration과 migrate를 하는데 설계도는 정상적으로 불러오지만 db반영이 되지 않음
+
