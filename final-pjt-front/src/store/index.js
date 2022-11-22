@@ -11,13 +11,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   plugins: [createPersistedState()],
   state: {
-    articles: [
-      {
-        id:1,
-        title: 'title',
-        content: 'content'
-      }
-    ],
+    articles: [],
     token: null,
     movies: [],
     trends: [],
@@ -152,7 +146,7 @@ export default new Vuex.Store({
     getArticles(context) {
       axios({
         method: 'get',
-        url: `${API_URL}/avi/v1/articles/`,
+        url: `${API_URL}/articles/`,
         headers: {
           Authorization: `Token ${context.state.token}`
         }

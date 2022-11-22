@@ -6,14 +6,15 @@
     <form @submit.prevent="createArticle">
       <label for="title">제목 :</label>
       <input type="text" id="title" v-model.trim="title" />
-      <br />
+      <br>
       <label for="content">내용 :</label>
       <textarea id="content" cols="30" rows="10" v-model="content"></textarea>
-      <br />
+      <br>
       <input type="submit" id="submit" />
     </form>
   </div>
 </template>
+
 
 <script>
 import axios from 'axios'
@@ -54,7 +55,7 @@ export default {
       })
         .then((res) => {
           console.log(res)
-          // this.$router.push({ name: 'ArticleView' }) 
+          this.$router.push({ name: 'articles' }) 
         })
         .catch((err) => {
           console.log(err)

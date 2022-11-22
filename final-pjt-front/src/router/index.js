@@ -61,7 +61,7 @@ const routes = [
   },
 
   {
-    path: '/articles/:article_id',
+    path: '/:id',
     name: 'DetailView',
     component: DetailView,
   },
