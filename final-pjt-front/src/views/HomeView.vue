@@ -5,7 +5,7 @@
     <div>homeview입니다.</div>
     <div>
       무비올 시작
-      <MovieAll />
+      <!-- <MovieAll /> -->
       여기까지 무비올
       <TrendMovie />
     </div>
@@ -21,14 +21,14 @@
 // import SignLogin from '../components/SignLogin.vue'
 
 // import NavBar from '@/components/NavBar.vue'
-import MovieAll from '@/components/MovieAll.vue'
+// import MovieAll from '@/components/MovieAll.vue'
 import TrendMovie from '@/components/TrendMovie.vue'
 
 export default {
   name: 'HomeView',
   components: {
     // NavBar,
-    MovieAll,
+    // MovieAll,
     TrendMovie,
 
     // HelloWorld,

@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'MovieAllItem',
+  name: 'TrendMovieItem',
   props: {
     movie: Object,
     movie_id: Number,

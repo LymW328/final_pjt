@@ -7,6 +7,7 @@ import SignupView from '../views/SignupView.vue'
 import MoviedetailView from '../views/MoviedetailView.vue'
 import ArticleView from '@/views/ArticleView'
 import CreateView from '@/views/CreateView'
+import CommentCreateView from '@/views/CommentCreateView'
 import DetailView from '@/views/DetailView'
 import TryCsssview from '@/views/TryCsssview'
 
@@ -64,6 +65,11 @@ const routes = [
     path: '/:id',
     name: 'DetailView',
     component: DetailView,
+  },
+  {
+    path: '/:id/createdcomment',
+    name: 'CommentCreateView',
+    component: CommentCreateView,
   },
 ]
 

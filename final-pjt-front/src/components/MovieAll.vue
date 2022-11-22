@@ -7,6 +7,7 @@
         :movie="movie"
         :movie_id="movie_id"
       />
+      <!-- <TestView /> -->
     </div>
   </div>
 </template>

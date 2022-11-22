@@ -6,7 +6,7 @@
     <router-link :to="{ name: 'DetailView', params: { id: article.id } }">
       [DETAIL]
     </router-link>
-    <hr>
+    <hr />
   </div>
 </template>
 
@@ -15,10 +15,8 @@ export default {
   name: 'ArticleListItem',
   props: {
     article: Object,
-  }
+  },
 }
 </script>
 
-<style>
-
-</style>
+<style></style>

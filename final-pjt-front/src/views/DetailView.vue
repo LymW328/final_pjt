@@ -6,6 +6,12 @@
     <p>내용 : {{ article?.content }}</p>
     <p>작성시간 : {{ article?.created_at }}</p>
     <p>수정시간 : {{ article?.updated_at }}</p>
+
+    <router-link
+      :to="{ name: 'CommentCreateView', params: { id: article.id } }"
+    >
+      댓글쓰기
+    </router-link>
   </div>
 </template>
 
