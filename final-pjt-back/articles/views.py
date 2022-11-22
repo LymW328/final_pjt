@@ -91,4 +91,5 @@ def comment_create(request, article_pk):
     serializer = CommentSerializer(data=request.data)
     if serializer.is_valid(raise_exception=True):
         serializer.save(article=article)
+        # article=article??
         return Response(serializer.data, status=status.HTTP_201_CREATED)

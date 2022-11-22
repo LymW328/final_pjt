@@ -21,6 +21,7 @@ class CommentSerializer(serializers.ModelSerializer):
 
 class ArticleSerializer(serializers.ModelSerializer):
     comment_set = CommentSerializer(many=True, read_only=True)
+    # 특정 게시글에 작성된 댓글 목록 출력
     comment_count = serializers.IntegerField(source='comment_set.count', read_only=True)
     username = serializers.CharField(source='user.username', read_only=True)
 
