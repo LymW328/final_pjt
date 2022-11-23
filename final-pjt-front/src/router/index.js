@@ -9,7 +9,7 @@ import ArticleView from '@/views/ArticleView'
 import CreateView from '@/views/CreateView'
 import CommentCreateView from '@/views/CommentCreateView'
 import DetailView from '@/views/DetailView'
-import TryCsssview from '@/views/TryCsssview'
+import MoCommentCreView from '@/views/MoCommentCreView'
 
 Vue.use(VueRouter)
 
@@ -67,9 +67,14 @@ const routes = [
     component: DetailView,
   },
   {
-    path: '/:id/createdcomment',
+    path: '/:id/createcomment',
     name: 'CommentCreateView',
     component: CommentCreateView,
+  },
+  {
+    path: '/movies/:movie_id/createcomment',
+    name: 'MoCommentCreView',
+    component: MoCommentCreView,
   },
 ]
 

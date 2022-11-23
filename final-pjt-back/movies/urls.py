@@ -11,7 +11,8 @@ urlpatterns = [
     path('trend/', views.trend_list),
     
     path('<int:movie_id>/', views.movie_detail),
-    path('comments/', views.movie_comment_list),
+    path('<int:movie_id>/comments/', views.movie_comment_list),
     # path('movies/comments/', views.movie_comment_list),
-    path('comments/<int:comment_pk>/', views.movie_comment_detail),
+    # path('<int:movie_id>/comments/<int:comment_pk>/', views.movie_comment_detail),
+    path('<int:movie_id>/comments/create/', views.movie_comment_create),
 ]

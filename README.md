@@ -144,3 +144,6 @@ python manage.py loaddata xxx.json
 12. makemigration과 migrate를 하는데 설계도는 정상적으로 불러오지만 db반영이 되지 않음
 
 13. samplesize와 filter-genre를 통해 특정 장르의 영화 a개를 가져올 수 있다.
+
+14. moviecomment는 movie_id를 외부키로 가져오면 된다.
+    이것은 comment에 article_id로 외부키를 삼은것과 같다.

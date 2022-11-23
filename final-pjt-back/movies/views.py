@@ -35,31 +35,43 @@ def movie_detail(request, movie_id):
 
 
 @api_view(['GET'])
-def movie_comment_list(request):
-    if request.method == 'GET':
-        comments = MovieComment.objects.all()
-        serializer = MovieCommentSerializer(comments, many=True)   
-        return Response(serializer.data)
+def movie_comment_list(request, movie_id):
+    movie = Movie.objects.get(pk=movie_id)
+    comments = MovieComment.objects.all()
+    serializer = MovieCommentSerializer(comments, many=True)   
+    return Response(serializer.data)
 
 
 
-# 이 두개가 필요한가?
+# 이 두 개가 필요한가?
+# 위는 모든 movie의 덧글을 출력해주는 코드
+# 아래는 개개의 무비덧글을 출력해주는 코드
 
-@api_view(['GET', 'DELETE', 'PUT'])
-def movie_comment_detail(request, comment_pk):
-    # comment = Comment.objects.get(pk=comment_pk)
-    comment = get_object_or_404(MovieComment, pk=comment_pk)
+# @api_view(['GET', 'DELETE', 'PUT'])
+# movie_id 인지 movie_pk인지 확인해보기
+# def movie_comment_detail(request, movie_id):
+#     # comment = Comment.objects.get(pk=comment_pk)
+#     comment = get_object_or_404(MovieComment, pk=comment_pk)
 
-    if request.method == 'GET':
-        serializer = MovieCommentSerializer(comment)
-        return Response(serializer.data)
+#     if request.method == 'GET':
+#         serializer = MovieCommentSerializer(comment)
+#         return Response(serializer.data)
+# ## 아래코드를 프로젝트 특성에 맞도록 사용하지 않습니다.
+#     elif request.method == 'DELETE':
+#         comment.delete()
+#         return Response(status=status.HTTP_204_NO_CONTENT)
 
-    elif request.method == 'DELETE':
-        comment.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
+#     elif request.method == 'PUT':
+#         serializer = MovieCommentSerializer(comment, data=request.data)
+#         if serializer.is_valid(raise_exception=True):
+#             serializer.save()
+#             return Response(serializer.data)
 
-    elif request.method == 'PUT':
-        serializer = MovieCommentSerializer(comment, data=request.data)
-        if serializer.is_valid(raise_exception=True):
-            serializer.save()
-            return Response(serializer.data)
+@api_view(['POST','GET'])
+#  movie_id 인지 movie_pk인지 확인해보기
+def movie_comment_create(request, movie_id):
+    movie = Movie.objects.get(pk=movie_id)
+    serializer = MovieCommentSerializer(data=request.data)
+    if serializer.is_valid(raise_exception=True):
+        serializer.save(movie=movie)
+        return  Response(serializer.data, status=status.HTTP_201_CREATED)

@@ -70,7 +70,7 @@ def comment_detail(request, comment_pk):
     if request.method == 'GET':
         serializer = CommentSerializer(comment)
         return Response(serializer.data)
-
+## 아래코드를 프로젝트 특성에 맞도록 사용하지 않습니다.
     elif request.method == 'DELETE':
         comment.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
