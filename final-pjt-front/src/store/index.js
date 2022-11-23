@@ -16,7 +16,7 @@ export default new Vuex.Store({
     movies: [],
     trends: [],
     movie: [],
-    comments: []
+    comments: [],
   },
   getters: {
     isLogin(state) {
@@ -90,6 +90,7 @@ export default new Vuex.Store({
         )
         .catch((err) => console.log(err))
     },
+
     signUp(context, payload) {
       const username = payload.username
       const password1 = payload.password1
@@ -149,11 +150,10 @@ export default new Vuex.Store({
         method: 'get',
         url: `${API_URL}/articles/`,
         headers: {
-          Authorization: `Token ${context.state.token}`
-        }
+          Authorization: `Token ${context.state.token}`,
+        },
       })
         .then((res) => {
-        
           context.commit('GET_ARTICLES', res.data)
         })
         .catch((err) => {

@@ -8,39 +8,47 @@
     <p>수정시간 : {{ article?.updated_at }}</p>
 
     <div>
-
-
-      <p v-if="isCommnendzero">
+      <p v-if="isCommentszero">
         덧글을 입력해 주세요
       </p>
 
       <p v-else>
         덧글 목록
-        <!-- <ul>
+        <ul>
           <li
-            v-for="(comment, idx) in comments"
-            :key ="idx"
+            v-for="(comment, id) in comments"
+            :key ="id"
             :comment="comment">
-            {{ comment }}
+            {{ comment.content }}
 
           </li>
-        </ul> -->
-
-       
+        </ul>
       </p>
     </div>
 
-    <router-link 
+    <router-link
       :to="{ name: 'CommentCreateView', params: { id: article.id } }"
     >
       댓글쓰기
     </router-link>
+
+    <p>여기는 덧글 목록입니다.</p>
+    
+    <ul>
+      <li 
+      v-for="(comment, id) in comments"
+      :key="id"
+      :comment="comment"
+      >
+    {{ comment.content }} 
+    </li>
+    </ul>
   </div>
 </template>
 
 <script>
 import axios from 'axios'
-import CommentList from '@/components/CommentList'
+// import CommentList from '@/components/CommentList'
 
 const API_URL = 'http://127.0.0.1:8000'
 
@@ -48,12 +56,16 @@ export default {
   name: 'DetailView',
   data() {
     return {
-      comments: [],
-      article: null,
+      comments: {
+        // id: {},
+      },
+      article: {
+        id: {},
+      },
     }
   },
-  compoennts: {
-    CommentList
+  components: {
+    // CommentList,
   },
   created() {
     this.getCommentList()
@@ -63,7 +75,7 @@ export default {
     // comments = this.$store.state
   },
   methods: {
-    isCommnendzero() {
+    isCommentszero() {
       if (!this.comments) {
         return true
       }
@@ -71,15 +83,14 @@ export default {
     getCommentList() {
       axios({
         method: 'get',
-        url : `${API_URL}/comments/`
-
+        url: `${API_URL}/articles/comments/`,
       })
-      .then((res) => {
-        console.log(res)
-        this.comments = res.data
-      })
-      .catch((err) => {
-      console.log(err)
+        .then((res) => {
+          console.log(res.data)
+          this.comments = res.data
+        })
+        .catch((err) => {
+          console.log(err)
         })
     },
 

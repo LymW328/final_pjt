@@ -84,7 +84,7 @@ def comment_detail(request, comment_pk):
     
 
 
-@api_view(['POST'])
+@api_view(['POST','GET'])
 def comment_create(request, article_pk):
     # article = Article.objects.get(pk=article_pk)
     article = get_object_or_404(Article, pk=article_pk)

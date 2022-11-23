@@ -55,11 +55,11 @@ const routes = [
     name: 'CreateView',
     component: CreateView,
   },
-  {
-    path: '/tss',
-    name: 'TryCsssview',
-    component: TryCsssview,
-  },
+  // {
+  //   path: '/tss',
+  //   name: 'TryCsssview',
+  //   component: TryCsssview,
+  // },
 
   {
     path: '/:id',

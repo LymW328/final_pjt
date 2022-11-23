@@ -50,6 +50,7 @@ export default {
     },
 
     imageURL() {
+      console.log(this.thismovie)
       return `https://image.tmdb.org/t/p/w500${this.thismovie.poster_path}`
     },
 

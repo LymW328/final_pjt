@@ -12,7 +12,7 @@ class Article(models.Model):
 
 class Comment(models.Model):
     # 아래 코드를 영화detail화면에 표시되게끔 설정하기
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    # user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     article = models.ForeignKey(Article, on_delete=models.CASCADE)
     content = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
