@@ -27,6 +27,21 @@ class MovieComment(models.Model):
     # user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     # ????
 
+
+class Top(models.Model):
+
+    movie_id = models.IntegerField()
+    title = models.CharField(max_length=100)
+    released_date = models.TextField()
+    popularity = models.FloatField()
+    vote_avg = models.FloatField()
+    overview = models.TextField()
+    poster_path = models.CharField(max_length=200)
+    genres = models.ManyToManyField(Genre)
+
+
+
+
 class Trend(models.Model):
 
     movie_id = models.IntegerField()

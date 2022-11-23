@@ -17,6 +17,7 @@ export default new Vuex.Store({
     trends: [],
     movie: [],
     comments: [],
+    tops: []
   },
   getters: {
     isLogin(state) {
@@ -33,6 +34,10 @@ export default new Vuex.Store({
     },
     GET_TRENDMOVIES(state, trends) {
       state.trends = trends
+      // console.log(state.movies)
+    },
+    GET_TOPMOVIES(state, tops) {
+      state.tops = tops
       // console.log(state.movies)
     },
     SAVE_TOKEN(state, token) {
@@ -86,6 +91,20 @@ export default new Vuex.Store({
       })
         .then(
           (res) => context.commit('GET_TRENDMOVIES', res.data),
+          // console.log('성공', context, res),
+        )
+        .catch((err) => console.log(err))
+    },
+    getTopMovies(context) {
+      axios({
+        method: 'get',
+        url: `${API_URL}/movies/top/`,
+        // headers: {
+        //   Authorization: `Token ${context.state.token}`,
+        // },
+      })
+        .then(
+          (res) => context.commit('GET_TOPMOVIES', res.data),
           // console.log('성공', context, res),
         )
         .catch((err) => console.log(err))

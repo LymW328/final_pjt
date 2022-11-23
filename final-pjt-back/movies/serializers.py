@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Movie, MovieComment, Trend
+from .models import Movie, MovieComment, Trend, Top
 # from .models import Article, Comment
 # 모델 데이터를 rest api에서 사용할 수 있게끔 json형식으로 바꿔준다.
 class MovieListSerializer(serializers.ModelSerializer):
@@ -20,6 +20,11 @@ class TrendListSerializer(serializers.ModelSerializer):
         model = Trend
         fields = '__all__'
 
+class TopListSerializer(serializers.ModelSerializer):
+    
+    class Meta:
+        model = Top
+        fields = '__all__'
 
 class MovieCommentSerializer(serializers.ModelSerializer):
 

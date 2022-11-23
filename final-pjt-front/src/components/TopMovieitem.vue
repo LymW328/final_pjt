@@ -6,13 +6,12 @@
       class="card-img-top width: 100px margin: 10px"
       alt="사진"
     />
-    
   </span>
 </template>
 
 <script>
 export default {
-  name: 'MovieAllItem',
+  name: 'TopMovieitem',
   props: {
     movie: Object,
     movie_id: Number,
