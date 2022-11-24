@@ -8,18 +8,19 @@ class Genreserializer(serializers.ModelSerializer):
     
     class Meta:
         model = Genre
-        fields = ('id', 'name',)
+        fields = ('name',)
         read_only_fields = ('movie',)
 
 
 class MovieListSerializer(serializers.ModelSerializer):
-    genre_set = Genreserializer(many=True, read_only=True)
+    
     class Meta:
         model = Movie
         fields = '__all__' 
 
 class MovieDetailSerializer(serializers.ModelSerializer):
     genres = Genreserializer(many=True, read_only=True)
+    # genre_set = Genreserializer(many=True, read_only=True)
     class Meta:
         model = Movie
         fields = '__all__' 
