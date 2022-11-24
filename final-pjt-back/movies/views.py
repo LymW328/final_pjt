@@ -8,7 +8,7 @@ from movies.serializers import MovieListSerializer , MovieDetailSerializer,  Tre
 from rest_framework import status
 from django.shortcuts import get_object_or_404, get_list_or_404
 
-from .models import Movie, MovieComment, Trend
+from .models import Movie, MovieComment, Trend, Top
  
 
 # 영화 리스트
@@ -26,8 +26,14 @@ def trend_list(request):
     return Response(serializer.data)
 
 @api_view(['GET'])
+def algo_list(request):
+    movies = Movie.objects.order_by('-vote_avg').prefetch_related('genres')[:20]
+    serializer = TrendListSerializer(movies, many=True)   
+    return Response(serializer.data)
+
+@api_view(['GET'])
 def top_list(request):
-    movies = Trend.objects.all()
+    movies = Top.objects.all()
     serializer = TopListSerializer(movies, many=True)   
     return Response(serializer.data)
 
@@ -47,6 +53,13 @@ def movie_comment_list(request, movie_id):
     serializer = MovieCommentSerializer(comments, many=True)   
     return Response(serializer.data)
 
+
+# @api_view(['GET'])
+# def argomovie_list(request):
+#     movies = Movie.objects.all()
+    
+#     serializer = MovieListSerializer(movies, many=True)   
+#     return Response(serializer.data)
 
 
 # 이 두 개가 필요한가?

@@ -38,6 +38,7 @@ def article_detail(request, article_pk):
     article = get_object_or_404(Article, pk=article_pk)
 
     if request.method == 'GET':
+        # comments = article.comment_set.all()
         serializer = ArticleSerializer(article)
         print(serializer.data)
         return Response(serializer.data)

@@ -7,7 +7,7 @@
     <p>작성시간 : {{ article?.created_at }}</p>
     <p>수정시간 : {{ article?.updated_at }}</p>
 
-    <div>
+    <!-- <div>
       <p v-if="isCommentszero">
         덧글을 입력해 주세요
       </p>
@@ -19,12 +19,12 @@
             v-for="(comment, id) in comments"
             :key ="id"
             :comment="comment">
-            {{ comment.content }}
+            {{ comment.comment_set }}
 
           </li>
         </ul>
       </p>
-    </div>
+    </div> -->
 
     <router-link
       :to="{ name: 'CommentCreateView', params: { id: article.id } }"
@@ -33,15 +33,15 @@
     </router-link>
 
     <p>여기는 덧글 목록입니다.</p>
-    
-    <ul>
-      <li 
-      v-for="(comment, id) in comments"
-      :key="id"
+    <ul
+      v-for="(comment, idx) in article.comment_set"
+      :key="idx"
       :comment="comment"
-      >
-    {{ comment.content }} 
-    </li>
+    >
+      {{
+        comment.content
+      }}
+      <li></li>
     </ul>
   </div>
 </template>
@@ -65,10 +65,10 @@ export default {
     }
   },
   components: {
-    // CommentList,
+    // List,
   },
   created() {
-    this.getCommentList()
+    // this.getCommentList()
     this.getArticleDetail()
   },
   computed: {
@@ -80,19 +80,19 @@ export default {
         return true
       }
     },
-    getCommentList() {
-      axios({
-        method: 'get',
-        url: `${API_URL}/articles/comments/`,
-      })
-        .then((res) => {
-          console.log(res.data)
-          this.comments = res.data
-        })
-        .catch((err) => {
-          console.log(err)
-        })
-    },
+    // getCommentList() {
+    //   axios({
+    //     method: 'get',
+    //     url: `${API_URL}/articles/comments/`,
+    //   })
+    //     .then((res) => {
+    //       console.log(res.data)
+    //       this.comments = res.data
+    //     })
+    //     .catch((err) => {
+    //       console.log(err)
+    //     })
+    // },
 
     getArticleDetail() {
       axios({
@@ -102,8 +102,12 @@ export default {
         // url: `${API_URL}/articles/${this.$route.params.id}/`가 아닌가..?
       })
         .then((res) => {
-          console.log(res)
+          console.log(1)
+          console.log(res.data)
+          // console.log(this.url)
           this.article = res.data
+          console.log(this.article)
+          // console.log(this.url)
         })
         .catch((err) => {
           console.log(err)

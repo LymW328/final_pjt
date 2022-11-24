@@ -29,7 +29,7 @@ def get_movie_datas():
 
             data = {
                 "pk": movie['id'],
-                "model": "movies.trend",
+                "model": "movies.top",
                 "fields": fields
             }
 

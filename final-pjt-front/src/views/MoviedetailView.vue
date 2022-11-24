@@ -35,6 +35,7 @@
       <button @click="getback">뒤로</button>
     </div>
     <!-- {{ check }} -->
+    <div></div>
   </div>
 </template>
 

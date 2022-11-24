@@ -1,7 +1,7 @@
 [
   {
     "pk": 851644,
-    "model": "movies.trend",
+    "model": "movies.top",
     "fields": {
       "movie_id": 851644,
       "title": "20세기 소녀",
@@ -18,7 +18,7 @@
   },
   {
     "pk": 238,
-    "model": "movies.trend",
+    "model": "movies.top",
     "fields": {
       "movie_id": 238,
       "title": "대부",
@@ -35,7 +35,7 @@
   },
   {
     "pk": 278,
-    "model": "movies.trend",
+    "model": "movies.top",
     "fields": {
       "movie_id": 278,
       "title": "쇼생크 탈출",
@@ -52,7 +52,7 @@
   },
   {
     "pk": 240,
-    "model": "movies.trend",
+    "model": "movies.top",
     "fields": {
       "movie_id": 240,
       "title": "대부 2",
@@ -69,7 +69,7 @@
   },
   {
     "pk": 667257,
-    "model": "movies.trend",
+    "model": "movies.top",
     "fields": {
       "movie_id": 667257,
       "title": "불가능한 것들",
@@ -86,7 +86,7 @@
   },
   {
     "pk": 19404,
-    "model": "movies.trend",
+    "model": "movies.top",
     "fields": {
       "movie_id": 19404,
       "title": "용감한 자가 신부를 데려가리",
@@ -104,7 +104,7 @@
   },
   {
     "pk": 424,
-    "model": "movies.trend",
+    "model": "movies.top",
     "fields": {
       "movie_id": 424,
       "title": "쉰들러 리스트",
@@ -122,7 +122,7 @@
   },
   {
     "pk": 620249,
-    "model": "movies.trend",
+    "model": "movies.top",
     "fields": {
       "movie_id": 620249,
       "title": "나소흑전기: 첫만남편",
@@ -140,7 +140,7 @@
   },
   {
     "pk": 129,
-    "model": "movies.trend",
+    "model": "movies.top",
     "fields": {
       "movie_id": 129,
       "title": "센과 치히로의 행방불명",
@@ -158,7 +158,7 @@
   },
   {
     "pk": 372754,
-    "model": "movies.trend",
+    "model": "movies.top",
     "fields": {
       "movie_id": 372754,
       "title": "동급생",
@@ -175,7 +175,7 @@
   },
   {
     "pk": 389,
-    "model": "movies.trend",
+    "model": "movies.top",
     "fields": {
       "movie_id": 389,
       "title": "12명의 성난 사람들",
@@ -191,7 +191,7 @@
   },
   {
     "pk": 372058,
-    "model": "movies.trend",
+    "model": "movies.top",
     "fields": {
       "movie_id": 372058,
       "title": "너의 이름은",
@@ -209,7 +209,7 @@
   },
   {
     "pk": 496243,
-    "model": "movies.trend",
+    "model": "movies.top",
     "fields": {
       "movie_id": 496243,
       "title": "기생충",
@@ -227,7 +227,7 @@
   },
   {
     "pk": 497,
-    "model": "movies.trend",
+    "model": "movies.top",
     "fields": {
       "movie_id": 497,
       "title": "그린 마일",
@@ -245,7 +245,7 @@
   },
   {
     "pk": 155,
-    "model": "movies.trend",
+    "model": "movies.top",
     "fields": {
       "movie_id": 155,
       "title": "다크 나이트",
@@ -264,7 +264,7 @@
   },
   {
     "pk": 724089,
-    "model": "movies.trend",
+    "model": "movies.top",
     "fields": {
       "movie_id": 724089,
       "title": "가브리엘의 지옥 파트 2",
@@ -280,7 +280,7 @@
   },
   {
     "pk": 696374,
-    "model": "movies.trend",
+    "model": "movies.top",
     "fields": {
       "movie_id": 696374,
       "title": "가브리엘의 지옥",
@@ -296,7 +296,7 @@
   },
   {
     "pk": 553512,
-    "model": "movies.trend",
+    "model": "movies.top",
     "fields": {
       "movie_id": 553512,
       "title": "번 더 스테이지: 더 무비",
@@ -312,7 +312,7 @@
   },
   {
     "pk": 680,
-    "model": "movies.trend",
+    "model": "movies.top",
     "fields": {
       "movie_id": 680,
       "title": "펄프 픽션",
@@ -329,7 +329,7 @@
   },
   {
     "pk": 429,
-    "model": "movies.trend",
+    "model": "movies.top",
     "fields": {
       "movie_id": 429,
       "title": "석양의 무법자",

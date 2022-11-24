@@ -2,20 +2,20 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
 
-  
     <div>
-      
       <!-- <MovieAll /> -->
       <h1>한 주의 PICK</h1>
       <TrendMovie />
     </div>
 
     <div>
-
       <h1>스테디</h1>
       <TopMovie />
     </div>
-    
+    <div>
+      <h1>알고</h1>
+      <AlgoMovie />
+    </div>
 
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <!-- <SignLogin /> -->
@@ -31,6 +31,7 @@
 // import MovieAll from '@/components/MovieAll.vue'
 import TrendMovie from '@/components/TrendMovie.vue'
 import TopMovie from '@/components/TopMovie.vue'
+import AlgoMovie from '@/components/AlgoMovie.vue'
 
 export default {
   name: 'HomeView',
@@ -38,8 +39,8 @@ export default {
     // NavBar,
     // MovieAll,
     TrendMovie,
-    TopMovie
-    
+    TopMovie,
+    AlgoMovie,
 
     // HelloWorld,
   },
@@ -48,6 +49,7 @@ export default {
     this.getMovies()
     this.getTrendMovies()
     this.getTopMovies()
+    this.getAlgoMovies()
   },
   methods: {
     getMovies() {
@@ -57,7 +59,10 @@ export default {
       this.$store.dispatch('getTrendMovies')
     },
     getTopMovies() {
-    this.$store.dispatch('getTopMovies')
+      this.$store.dispatch('getTopMovies')
+    },
+    getAlgoMovies() {
+      this.$store.dispatch('getAlgoMovies')
     },
   },
 }
