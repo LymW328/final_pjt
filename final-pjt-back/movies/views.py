@@ -3,12 +3,12 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from rest_framework.decorators import permission_classes
 from rest_framework.permissions import IsAuthenticated
-from movies.serializers import MovieListSerializer , MovieDetailSerializer,  TrendListSerializer, MovieCommentSerializer, TopListSerializer
+from movies.serializers import MovieListSerializer , MovieDetailSerializer,  TrendListSerializer, MovieCommentSerializer, TopListSerializer, Genreserializer
 
 from rest_framework import status
 from django.shortcuts import get_object_or_404, get_list_or_404
 
-from .models import Movie, MovieComment, Trend, Top
+from .models import Movie, MovieComment, Trend, Top, Genre
  
 
 # 영화 리스트
@@ -51,6 +51,13 @@ def movie_comment_list(request, movie_id):
     movie = Movie.objects.get(pk=movie_id)
     comments = MovieComment.objects.all()
     serializer = MovieCommentSerializer(comments, many=True)   
+    return Response(serializer.data)
+
+@api_view(['GET'])
+def genre(request):
+    genre = Genre.objects.all()
+    
+    serializer = Genreserializer(genre, many=True)   
     return Response(serializer.data)
 
 

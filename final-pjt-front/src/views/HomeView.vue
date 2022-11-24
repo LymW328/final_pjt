@@ -5,7 +5,7 @@
     <div>
       <!-- <MovieAll /> -->
       <h1>한 주의 PICK</h1>
-      <TrendMovie />
+      <!-- <TrendMovie /> -->
     </div>
 
     <div>
@@ -13,7 +13,6 @@
       <TopMovie />
     </div>
     <div>
-      <h1>알고</h1>
       <AlgoMovie />
     </div>
 
@@ -29,7 +28,7 @@
 
 // import NavBar from '@/components/NavBar.vue'
 // import MovieAll from '@/components/MovieAll.vue'
-import TrendMovie from '@/components/TrendMovie.vue'
+// import TrendMovie from '@/components/TrendMovie.vue'
 import TopMovie from '@/components/TopMovie.vue'
 import AlgoMovie from '@/components/AlgoMovie.vue'
 
@@ -38,7 +37,7 @@ export default {
   components: {
     // NavBar,
     // MovieAll,
-    TrendMovie,
+    // TrendMovie,
     TopMovie,
     AlgoMovie,
 

@@ -19,6 +19,7 @@ export default new Vuex.Store({
     comments: [],
     tops: [],
     algos: [],
+    genres: [],
   },
   getters: {
     isLogin(state) {
@@ -56,6 +57,9 @@ export default new Vuex.Store({
     },
     GET_ARTICLES(state, articles) {
       state.articles = articles
+    },
+    GET_GENRES(state, genres) {
+      state.genres = genres
     },
   },
   actions: {
@@ -194,6 +198,21 @@ export default new Vuex.Store({
       })
         .then((res) => {
           context.commit('GET_ARTICLES', res.data)
+        })
+        .catch((err) => {
+          console.log(err)
+        })
+    },
+    getGenres(context) {
+      axios({
+        method: 'get',
+        url: `${API_URL}/movies/genre`,
+        headers: {
+          Authorization: `Token ${context.state.token}`,
+        },
+      })
+        .then((res) => {
+          context.commit('GET_GENRES', res.data)
         })
         .catch((err) => {
           console.log(err)

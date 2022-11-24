@@ -15,7 +15,7 @@
             <b-card-body :title="thismovie.title">
               <b-card-text>
                 <div>
-                  {{ thismovie.genres }}
+                  {{ thismovie.genres[1].name }}
                 </div>
 
                 <div>
@@ -76,6 +76,7 @@ export default {
         url: `${API_URL}/movies/${this.$route.params.movie_id}/`,
       })
         .then((res) => {
+          console.log('디테일')
           console.log(res.data)
           this.thismovie = res.data
         })

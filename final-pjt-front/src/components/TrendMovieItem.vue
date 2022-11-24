@@ -1,12 +1,7 @@
 <template>
-  <span class="col d-flex justify-content-center margin mb-4 mt-4">
-    <img
-      @click="getdetail"
-      :src="imageURL"
-      class="card-img-top width: 100px margin: 10px"
-      alt="사진"
-    />
-  </span>
+  <div class="box">
+    <b-carousel-slide :img-src="imageURL"></b-carousel-slide>
+  </div>
 </template>
 
 <script>

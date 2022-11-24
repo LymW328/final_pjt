@@ -11,6 +11,7 @@ urlpatterns = [
     path('trend/', views.trend_list),
     path('algo/', views.algo_list),
     path('top/', views.top_list),
+    path('genre/', views.genre),
     
     path('<int:movie_id>/', views.movie_detail),
     path('<int:movie_id>/comments/', views.movie_comment_list),
