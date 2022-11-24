@@ -1,10 +1,12 @@
+  10조 임양원의 README.MD
+
 1. 회원가입 정보를 커스텀화하기
 
 - Registerserializer를 상속받아 재정의해 줘야 한다.
-- AUTH_USER_MODEL = 'accounts.User'(완)
-- 데이터 베이스 설계(진행중)\
-- 모델 클래스 설정(완)
-- django-rest-auth 사용을 위한 설치, 설정(진행 중)
+- AUTH_USER_MODEL = 'accounts.User'
+- 데이터 베이스 설계
+- 모델 클래스 설정
+- dj-rest-auth 사용을 위한 설치, 설정
 
 2. 유저
 
@@ -148,6 +150,6 @@ python manage.py loaddata xxx.json
     genre_set = Genreserializer(many=True, read_only=True)은 틀린 문법이기 때문에
     genres = Genreserializer(many=True, read_only=True)로 해줘야 한다.
 
-16.
+
 
 =======================================================================
