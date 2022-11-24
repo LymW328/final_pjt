@@ -12,22 +12,17 @@
    2. 로그인/로그아웃
    3. 디테일
    4. 좋아요
-   5. ㅇ
 
-3. App
+3) App
 
    1. 서비스 이름
-   2. 검색창
-   3. 내비게이션 바
 
-3) 영화
+   2. 내비게이션 바
+
+3. 영화
 
    1. 좋아하는 영화를 선택하세요-(추천알고리즘)
    2. 요즘 트렌드 영화 제시
-
-4. 무비아이템디테일(클릭 시)
-   1. 영화 제목
-   2. 영화 배우들
 
 ========================================
 팁
@@ -147,3 +142,12 @@ python manage.py loaddata xxx.json
 
 14. moviecomment는 movie_id를 외부키로 가져오면 된다.
     이것은 comment에 article_id로 외부키를 삼은것과 같다.
+
+15. Serializer 파일을 설정 할 때
+    M:N 관계설정에서
+    genre_set = Genreserializer(many=True, read_only=True)은 틀린 문법이기 때문에
+    genres = Genreserializer(many=True, read_only=True)로 해줘야 한다.
+
+16.
+
+=======================================================================

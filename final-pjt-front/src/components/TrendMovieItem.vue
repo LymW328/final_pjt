@@ -1,5 +1,5 @@
 <template>
-  <div class="box">
+  <div class="box" @click="getdetail">
     <b-carousel-slide :img-src="imageURL"></b-carousel-slide>
   </div>
 </template>

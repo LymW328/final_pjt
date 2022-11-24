@@ -1,41 +1,51 @@
 <template>
   <div>
-    <div class="d-flex justify-content-center mb-3 mt-3">
-      <b-card no-body class="overflow-hidden" style="max-width: 540px;">
-        <b-row no-gutters>
-          <b-col md="6">
-            <b-card-img
-              :src="imageURL"
-              alt="Image"
-              class="rounded-0"
-            ></b-card-img>
-          </b-col>
-
-          <b-col md="6">
-            <b-card-body :title="thismovie.title">
-              <b-card-text>
-                <div>
-                  {{ thismovie.genres[1].name }}
-                </div>
-
-                <div>
-                  {{ thismovie.released_date }}
-                </div>
-
-                <div>
-                  {{ thismovie.overview }}
-                </div>
-              </b-card-text>
-            </b-card-body>
-          </b-col>
-        </b-row>
-      </b-card>
-    </div>
     <div>
-      <button @click="getback">뒤로</button>
+      <div class="d-flex justify-content-center mb-3 mt-3">
+        <b-card no-body class="overflow-hidden" style="max-width: 750px;">
+          <b-row no-gutters>
+            <b-col md="6">
+              <b-card-img
+                :src="imageURL"
+                alt="Image"
+                class="movie"
+              ></b-card-img>
+            </b-col>
+
+            <b-col md="6">
+              <b-card-body :title="thismovie.title">
+                <hr />
+
+                <div class="test">
+                  <div class="genres">
+                    개봉날짜: {{ thismovie.released_date }}
+                  </div>
+
+                  <div>
+                    <!-- {{ thismovie.genres }} -->
+                  </div>
+                  <ul>
+                    <li v-for="(genre, idx) in thismovie.genres" :key="idx">
+                      {{ genre['name'] }}
+                    </li>
+                  </ul>
+
+                  <hr />
+
+                  <div class="overview">
+                    {{ thismovie.overview }}
+                  </div>
+                </div>
+              </b-card-body>
+            </b-col>
+          </b-row>
+        </b-card>
+      </div>
+
+      <div class="button">
+        <b-button @click="getback" variant="danger">영화 목록</b-button>
+      </div>
     </div>
-    <!-- {{ check }} -->
-    <div></div>
   </div>
 </template>
 
@@ -76,7 +86,6 @@ export default {
         url: `${API_URL}/movies/${this.$route.params.movie_id}/`,
       })
         .then((res) => {
-          console.log('디테일')
           console.log(res.data)
           this.thismovie = res.data
         })
@@ -87,24 +96,19 @@ export default {
     },
   },
 
-  // props: {
-  //   movie_id: {
-  //     type: Number,
-
-  //   },
-  //   check: {
-  //     type: String,
-  //     default: "",
-  //   },
-
-  // },
   created() {
-    console.log(this.$route.params.check)
-    console.log(this.$route.params.movie_id)
-    console.log(this.$store.state.movie)
     this.getMovieDetail()
   },
 }
 </script>
 
-<style></style>
+<style>
+.test {
+  font-family: 'Humanbumsuk', sans-serif;
+}
+
+.button {
+  align-items: flex-end;
+  margin: 0px 10px 0px 0px;
+}
+</style>

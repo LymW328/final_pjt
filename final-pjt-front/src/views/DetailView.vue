@@ -1,48 +1,58 @@
 <template>
   <div>
-    <h1>Detail</h1>
-    <p>글 번호 : {{ article?.id }}</p>
-    <p>제목 : {{ article?.title }}</p>
-    <p>내용 : {{ article?.content }}</p>
-    <p>작성시간 : {{ article?.created_at }}</p>
-    <p>수정시간 : {{ article?.updated_at }}</p>
+    <div class="d-flex justify-content-center mb-3 mt-3">
+      <b-card no-body class="overflow-hidden" style="max-width: 500px;">
+        <h3>{{ article?.id }}번째 글</h3>
+        <hr />
+        <h3>
+          <b>{{ article?.title }}</b>
+        </h3>
+        <hr />
+        <p>내용 : {{ article?.content }}</p>
 
-    <!-- <div>
-      <p v-if="isCommentszero">
-        덧글을 입력해 주세요
-      </p>
+        <hr />
+        <p>작성시간 : {{ article?.created_at }}</p>
+        <div>
+          <hr />
+          <p v-if="isCommentszero">
+            덧글을 입력해 주세요
+          </p>
 
-      <p v-else>
-        덧글 목록
-        <ul>
-          <li
-            v-for="(comment, id) in comments"
-            :key ="id"
-            :comment="comment">
-            {{ comment.comment_set }}
+          <div>
+            <div>
+              <p>여기는 덧글 목록입니다.</p>
+              <ul
+                v-for="(comment, idx) in article.comment_set"
+                :key="idx"
+                :comment="comment"
+              >
+                <li>
+                  {{ comment.content }}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
-          </li>
-        </ul>
-      </p>
-    </div> -->
+        <router-link
+          :to="{ name: 'CommentCreateView', params: { id: article.id } }"
+        >
+          댓글쓰기
+        </router-link>
 
-    <router-link
-      :to="{ name: 'CommentCreateView', params: { id: article.id } }"
-    >
-      댓글쓰기
-    </router-link>
+        <p>여기는 덧글 목록입니다.</p>
 
-    <p>여기는 덧글 목록입니다.</p>
-    <ul
-      v-for="(comment, idx) in article.comment_set"
-      :key="idx"
+        <!-- <ul>
+      <li 
+      v-for="(comment, id) in comments"
+      :key="id"
       :comment="comment"
-    >
-      {{
-        comment.content
-      }}
-      <li></li>
-    </ul>
+      >
+    {{ comment.content }} 
+    </li>
+    </ul> -->
+      </b-card>
+    </div>
   </div>
 </template>
 
